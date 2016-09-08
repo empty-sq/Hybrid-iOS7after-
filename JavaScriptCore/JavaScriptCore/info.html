@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+	<title>JavaScriptCore</title>
+</head>
+<body>
+	<div style="width:300px; margin: 0 auto;background:red;">
+		<input type="button" value="带两个参数的方法" onclick="Native.testMethodWithParam1Param2('param1_value', 'param2_value')" />
+		<br />
+		<input type="button" value="带两个参数的方法2" onclick="Native.testMethod(1111, '2222')" />
+		<br /> 
+		<input type="button" value="带一个参数的方法" onclick="Native.testLog('带一个参数')" />
+		<br />
+		<input type="button" value="参数为数组的方式" onclick="Native.testArray([1111, '2222'])" />
+		<br />
+        <input type="button" value="测试log" onclick="log('测试')" />
+        <br />
+        <input type="button" value="JS调用OC原生提示框" onclick="alert('alert')" />
+        <br />
+        <input type="button" value="添加视图" onclick="addSubView('view')" />
+        <br />
+        <div>
+            <span>输入一个整数:</span>
+            <input id="input" type="text" />
+            <br />
+            结果为:<p id="result"></p>
+        </div>
+        <input type="button" value="计算阶乘" onclick="Native.calculateForJS(input.value)" />
+	</div>
+</body>
+<script type="text/javascript">
+    function showResult(resultNumber) {
+        document.getElementById("result").innerText = resultNumber;
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
